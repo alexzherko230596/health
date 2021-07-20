@@ -34,6 +34,9 @@
                 box-shadow: none
     &__content
         margin-top: 30px
+        display: none
+        &_active
+            display: flex
     &-item
         width: 400px
         margin: 0 auto
@@ -42,6 +45,12 @@
         min-height: 440px
         border: 2px solid #e8e8e8
         padding: 20px 20px 26px 20px
+        overflow: hidden
+        &_newest
+            margin-left: 20px
+            margin-right: 20px
+        &__hide
+            visibility: hidden
         &__img
             display: block
             margin: 0 auto
@@ -89,6 +98,61 @@
             font-size: 20px
             font-weight: 700
             color: #050505
+        &__wrapper
+            display: flex
+            width: calc(200% + 40px)
+        &__content
+            width: 50%
+            margin-right: 0px
+            transform: translateX(-100%)
+            transition: 0.5s all
+            &_active
+                transform: translateX(0%)
+                margin-right: 20px
+        &__list
+            position: relative
+            width: 50%
+            margin-left: 20px
+            transform: translateX(0%)
+            transition: 0.5s all
+            padding-right: 20px
+            padding-left: 19px
+            margin-bottom: 0px
+            list-style-type: none
+            &_active
+                transform: translateX(-100%)
+                margin-left: 0px
+            li
+                position: relative
+                color: #555555
+                font-size: 14px
+                font-weight: 300
+                margin-bottom: 20px
+                &:before
+                    content: ''
+                    position: absolute
+                    width: 5px
+                    height: 5px
+                    background-color: #c70101
+                    left: -14px
+                    top: 8px
+        &__back
+            font-size: 14px
+            font-weight: 500
+            text-transform: uppercase
+            text-decoration: underline
+            text-align: center
+            color: #c70101
+            position: absolute
+            bottom: 0px
+            left: 50%
+            transform: translateX(calc(-50% - 19px))
+            &:hover
+                text-decoration: underline
+                color: #c70101
+
+
+                
 
 
 
